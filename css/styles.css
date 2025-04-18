@@ -1,0 +1,16 @@
+
+ul {
+  color: coral;
+  list-style-type: none;
+  border: 1px solid gray;
+}
+a {
+  color: salmon;
+  text-decoration: none;
+}
+h1 {
+  color: blue;
+}
+.sub1 {
+  background-color: aqua;
+}

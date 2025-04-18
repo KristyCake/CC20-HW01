@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>About page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    form {
+      border : 1px solid lightgray;
+      padding: 32px;
+      width: 600px;
+      border-radius: 8px;
+    }
+    input, select, textarea{
+      width: 100%;
+      margin-bottom: 12px;
+      font-size: 20px;
+      padding: 8px;
+      border: 1px solid silver;
+      border-radius: 4px;
+    }
+    input[type=submit] {
+      background-color: skyblue;
+      border: none;
+      color: blueviolet;
+    }
+    label {
+      width: 100%;
+      color: #555;
+    }
+    .w-fit {
+      width: auto;
+    }
+    .group1 {
+      background-color: aquamarine;
+      margin-block: 8px ;
+      padding: 4px;
+      padding-left: 50px;
+    }
+    .groupname {
+      font-size: 18px;
+      color: coral;
+    }
+    input[type=file] {
+      color: red;
+      opacity: 0.3;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li> 
+      <a href="./index.html">Home</a>
+    </li>
+    <li> 
+      <a href="#">About Us</a>
+    </li>
+    <li> 
+      <a href="./service.html">Service</a>
+    </li>
+  </ul>
+  <h1>About page</h1>
+  <img src="./pics/tiktok.png" alt="Tiktok logo" height="50px">
+  <hr>
+  <h3>Contact form</h3>
+  <form action="https://jkorpela.fi/cgi-bin/echo.cgi" >
+    <input type="text" placeholder="Nickname" name="nickname">
+    <input type="text" placeholder="Age" name="age">
+    <!-- 
+      <label for="email">E-mail:</label>
+      <input type="email" id="email"> 
+    -->
+    <label>E-mail:
+      <input type="email" name="email"> <!--validation-->
+    </label>
+    
+    <div class="group1">
+      <span class="groupname">Role : </span> 
+      <label class="w-fit">
+        <input class="w-fit" type="radio" name="role" value="seller">
+        Seller
+      </label>
+      <label class="w-fit">
+        <input class="w-fit" type="radio" name="role" value="buyer">
+        Buyer
+      </label>
+      <label class="w-fit">
+        <input class="w-fit" type="radio" name="role" value="visitor">
+        Visitor
+      </label>
+    </div>
+
+    <div class="group1">
+      <span class="groupname">Status :</span>
+      <label class="w-fit">
+        <input class="w-fit" type="checkbox" name="vip" value="true" checked>
+        VIP
+      </label>
+      <label class="w-fit">
+        <input class="w-fit" type="checkbox" name="sponsor" value="true">
+        Sponsor
+      </label>
+    </div>
+
+    <label for="gender">Gender</label>
+    <select name="gender" id="gender">
+      <option disabled selected>Please Select..</option>
+      <option>Male</option>
+      <option>FeMale</option>
+      <option>Others</option>
+    </select>
+
+    <label for="notes">
+      <textarea name="notes" id="notes" rows="4"></textarea>
+    </label>
+
+    <label>password
+      <input type="password" name="password">
+    </label>
+    <label>Due date
+      <input type="date" name="duedate">
+    </label>
+    <label>
+      <input type="file" name="pic">
+    </label>
+
+    <input type="submit" value="Send">
+    <input type="reset" value="Clear">
+  </form>
+
+</body>
+</html>
